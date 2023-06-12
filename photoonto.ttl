@@ -1,0 +1,125 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix : 		<http://visualdataweb.org/newOntology/> .
+@base 			<http://visualdataweb.org/newOntology/> .
+
+<http://visualdataweb.org/newOntology/> rdf:type owl:Ontology ;
+                                        dc:title "New ontology"@en; 
+                                        dc:description "New ontology description"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 10 ###
+#  --------------------------- Property 0------------------------- 
+:автор rdf:type owl:ObjectProperty ;
+       rdfs:label "являться_автором"@en; 
+       rdfs:domain :Персона;
+       rdfs:range :Сущность . 
+#  --------------------------- Property 1------------------------- 
+:носитель rdf:type owl:ObjectProperty ;
+          rdfs:label "иметь_носителя"@en; 
+          rdfs:domain :Паттерн;
+          rdfs:range :Сущность . 
+#  --------------------------- Property 2------------------------- 
+:владелец rdf:type owl:ObjectProperty ;
+          rdfs:label "являться_владельцем"@en; 
+          rdfs:domain :Персона;
+          rdfs:range :Сущность . 
+#  --------------------------- Property 3------------------------- 
+:изображена rdf:type owl:ObjectProperty ;
+            rdfs:label "быть изображенной"@en; 
+            rdfs:domain :Сущность;
+            rdfs:range :Изображение . 
+#  --------------------------- Property 4------------------------- 
+:это rdf:type owl:ObjectProperty ;
+     rdfs:label "есть"@en; 
+     rdfs:domain :Референс;
+     rdfs:range :Изображение . 
+#  --------------------------- Property 5------------------------- 
+:принадлежит rdf:type owl:ObjectProperty ;
+             rdfs:label "принадлежать"@en; 
+             rdfs:domain :Сущность;
+             rdfs:range :Персона . 
+#  --------------------------- Property 6------------------------- 
+:включает rdf:type owl:ObjectProperty ;
+          rdfs:label "включать"@en; 
+          rdfs:domain :Пространство;
+          rdfs:range :Сущность . 
+#  --------------------------- Property 7------------------------- 
+:сходно rdf:type owl:ObjectProperty ;
+        rdfs:label "сходно"@IRI-based; 
+        rdfs:label "сходно"@iri-based; 
+        rdfs:label "сходно"@en; 
+        rdfs:domain :Сущность;
+        rdfs:range :Сущность . 
+#  --------------------------- Property 8------------------------- 
+:часть rdf:type owl:ObjectProperty ;
+       rdfs:label "являться_частью"@en; 
+       rdfs:domain :Пространство;
+       rdfs:range :Изображение . 
+#  --------------------------- Property 9------------------------- 
+:ID rdf:type owl:DatatypeProperty ;
+    rdfs:label "ID"@en; 
+    rdfs:domain :Изображение;
+    rdfs:range rdfs:Literal . 
+###  Class Definitions (Number of Classes) 9 ###
+#  --------------------------- Class  0------------------------- 
+:Сущность rdf:type owl:Class; 
+          rdfs:subClassOf :Изображение ;
+          rdfs:label "Сущность"@en . 
+#  --------------------------- Class  1------------------------- 
+:Паттерн rdf:type owl:Class; 
+         rdfs:label "Паттерн"@IRI-based; 
+         rdfs:label "Паттерн"@iri-based; 
+         rdfs:label "Паттерн"@en . 
+#  --------------------------- Class  2------------------------- 
+:Строение rdf:type owl:Class; 
+          rdfs:subClassOf :Сущность ;
+          rdfs:label "Строение"@IRI-based; 
+          rdfs:label "Строение"@iri-based; 
+          rdfs:label "Строение"@en . 
+#  --------------------------- Class  3------------------------- 
+:Референс rdf:type owl:Class; 
+          rdfs:subClassOf :Сущность ;
+          rdfs:label "Референс"@IRI-based; 
+          rdfs:label "Референс"@iri-based; 
+          rdfs:label "Референс"@en . 
+#  --------------------------- Class  4------------------------- 
+:Изображение rdf:type owl:Class; 
+             rdfs:label "Изображение"@IRI-based; 
+             rdfs:label "Изображение"@iri-based; 
+             rdfs:label "Изображение"@en . 
+#  --------------------------- Class  5------------------------- 
+:Персона rdf:type owl:Class; 
+         rdfs:subClassOf :Сущность ;
+         rdfs:label "Персона"@IRI-based; 
+         rdfs:label "Персона"@iri-based; 
+         rdfs:label "Персона"@en . 
+#  --------------------------- Class  6------------------------- 
+:Текст rdf:type owl:Class; 
+       rdfs:subClassOf :Сущность ;
+       rdfs:label "Текст"@IRI-based; 
+       rdfs:label "Текст"@iri-based; 
+       rdfs:label "Текст"@en . 
+#  --------------------------- Class  7------------------------- 
+:Пространство rdf:type owl:Class; 
+              rdfs:label "Пространство"@IRI-based; 
+              rdfs:label "Пространство"@iri-based; 
+              rdfs:label "Пространство"@en . 
+#  --------------------------- Class  8------------------------- 
+:Предмет rdf:type owl:Class; 
+         rdfs:subClassOf :Сущность ;
+         rdfs:label "Предмет"@IRI-based; 
+         rdfs:label "Предмет"@iri-based; 
+         rdfs:label "Предмет"@en . 
